@@ -123,9 +123,6 @@
         </div>
         <!-- End Hero Content-->
 
-
-
-
         <!-- Begin Hero Menu -->
         <div class="hero-foot ">
           <div class="hero-foot--wrapper">
@@ -161,8 +158,6 @@
 
     <!-- Begin Main Content -->
     <div class="main-content">
-
-      
       <!-- Begin regular-section-->
       <div class="section-light regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         
@@ -261,9 +256,6 @@
             </div>
       <!-- End Lokasi Content -->
 
-
-      
-
       <!-- Begin Foto -->
       <div class="section-dark foto-foto" id=  "foto">
         <div class="container">
@@ -352,39 +344,81 @@
             data-aos="fade-in-up"
             data-aos-easing="linear"
           ></div>
-            <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" id="title_rsvp">RSVP</h1>
-            </div>
-            <p class="tempat is-larger has-text-centered" id="rsvp_line">
-              If you are able to join us and bless us with your presence, it would be our greatest honor and joy.
-              </br>
-              We look forward to hearing from you if you're able to attend.
-              </br></br>
-              If you cannot make it to our wedding, that's perfectly okay—
-              </br>
-              we hope to see you again on another happy occasion.
-              </br></br>
-              Until then, please stay safe and healthy. 💛
-            </p>
+          <div class="column is-12 prolog">
+            <h1 class="title has-text-centered section-title" id="title_rsvp">RSVP</h1>
+          </div>
+          <p class="bodytext is-larger has-text-centered" id="rsvp_line">
+            If you are able to join us and bless us with your presence, it would be our greatest honor and joy.
+            </br>
+            We look forward to hearing from you if you're able to attend.
+            </br></br>
+            If you cannot make it to our wedding, that's perfectly okay!
+            </br>
+            You're also welcome to leave us a message or blessing below. We'd love to hear from you!
+            </br></br>
+            we hope to see you again on another happy occasion.
+            </br>
+            Until then, please stay safe and healthy. 💛
+          </p>
 
-            <div class="column is-12 prolog has-text-centered">
-                
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSejvilYJ5k8-WZKva5zJdMBVK4R7FF_-xBBdn_31cLRiCguug/viewform?usp=header" class="button btn-whatsapp" data-aos="fade-right">
-                      <i class="fab fa-whatsapp"></i>
-                      <span id="btn_rsvp">RSVP</span>
-                    </a>
-                
-                
-                    <!-- <a href="https://api.whatsapp.com/send?phone=62811880262&text=Halo%20Daeng,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" data-aos="fade-left">
-                      <i class="fab fa-whatsapp"></i>
-                      &nbsp;&nbsp; Kabari Daeng
-                    </a > -->
-            </div>
-
+          <div class="column is-12 prolog has-text-centered">
+              
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSejvilYJ5k8-WZKva5zJdMBVK4R7FF_-xBBdn_31cLRiCguug/viewform?usp=header" class="button btn-whatsapp" data-aos="fade-right">
+                    <i class="fab fa-whatsapp"></i>
+                    <span id="btn_rsvp">RSVP</span>
+                  </a>
+              
+              
+                  <!-- <a href="https://api.whatsapp.com/send?phone=62811880262&text=Halo%20Daeng,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" data-aos="fade-left">
+                    <i class="fab fa-whatsapp"></i>
+                    &nbsp;&nbsp; Kabari Daeng
+                  </a > -->
           </div>
         </div>
       </div>
       <!-- End RSVP Content -->
+
+      <!-- Begin Contribution Section -->
+      <div class="section-dark" id="contribution">
+        <div class="container" style="width: 100%">
+          <div class="column is-12 prolog">
+            <h1 class="title has-text-centered section-title" id="title_contribution">CONTRIBUTION DETAILS</h1>
+          </div>
+          <p class="bodytext is-larger has-text-centered" id="contribution_line">
+            <!-- Your presence at our wedding is the greatest gift we could ask for.
+            </br>
+            If you wish to contribute further, a donation toward our future together would be deeply appreciated. -->
+          </p>
+          <div class="account-wrapper">
+            <div class="label" id="account_label">예금주 : 강시연</div>
+            <div class="account-box">
+              <span class="account-text" id="accountNumber">농협은행 312-0000-4199-31</span>
+              <button class="copy-btn" id="copy1">복사하기</button>
+            </div>
+          </br>
+          </div>
+
+          <div class="account-wrapper" id="routing_num" hidden>
+            <div class="label">Routing number</div>
+            <div class="account-box">
+              <span class="account-text" id="routingNumber">2</span>
+              <button class="copy-btn" id="copy2">Copy</button>
+            </div>
+          </br>
+          </div>
+
+          <div class="account-wrapper" id="venmo" hidden>
+            <div class="label">Venmo</div>
+            <div class="account-box">
+              <span class="account-text" id="venmo_id">@ethan</span>
+              <button class="copy-btn" id="copy3">Copy</button>
+            </div>
+          </div>
+
+          <div class="copy-popup" id="copyPopup"></div>
+        </div>
+      </div>
+      <!-- End Waktu Content -->
     </div>
     <!-- End Main Content -->
 
@@ -403,6 +437,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menikah.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/copy.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>

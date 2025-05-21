@@ -38,7 +38,7 @@ html {
 
 
 .hero {
-  background-image: url(https://picsum.photos/id/25/1920/1080);
+  background-image: url(../image/topanga.jpg);
   background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url(../image/topanga.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -679,4 +679,89 @@ body.preloader-site {
 #languageSelector:focus {
   border-color: #c46563;
   box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.4);
+}
+
+#contribution .account-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 317px;
+  font-family: 'Arial', sans-serif;
+}
+
+#contribution .account-text {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: left;
+}
+
+#contribution .copy-btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+#contribution .copy-btn:hover {
+  background-color: #d4d4d4;
+}
+
+#contribution .label {
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+#contribution .account-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.account-wrapper[hidden] {
+  display: none !important;
+}
+
+#contribution .copy-btn .copied {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.copy-popup {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff0f6;
+  color: #d81b60;
+  padding: 10px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+}
+
+.copy-popup.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
 }

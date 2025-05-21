@@ -1,4 +1,6 @@
 const selector = document.querySelector("#languageSelector");
+const routingNum = document.querySelector("#routing_num");
+const venmo = document.querySelector("#venmo");
 
 const langResource = {
     ko : {
@@ -22,10 +24,10 @@ const langResource = {
                             <div class="waktu tanggal-bulan has-text-centered">수요일</div>`,
             schedule_time: `시간:
                             <br>
-                            <strong>오후 4:00</strong>`,
+                            <strong>오후 5:00</strong>`,
             schedule_reception: `피로연:
                                 <br>
-                                <strong>오후 5:00 - 5:30</strong>`,
+                                <strong>오후 6:00</strong>`,
             title_location: "위치",
             exact_location: `20024 Vally view dr.
                             </br>
@@ -34,16 +36,28 @@ const langResource = {
             btn_dir: "길찾기",
             title_photos: "사진",
             title_rsvp: "참석 여부",
-            rsvp_line: `저희의 소중한 날에 함께해주시어 자리를 빛내주신다면, 더없이 큰 기쁨과 영광이 될 것입니다.
+            rsvp_line: `저희의 소중한 날에 함께해주시어 자리를 빛내주신다면, 더없이 큰 기쁨이 될 것입니다.
                         </br>
                         참석이 가능하시다면, 하단의 버튼을 통해 참석 여부를 알려주세요.
                         </br></br>
-                        혹시 함께하지 못하시더라도 괜찮습니다.
+                        혹시 함께하지 못하시더라도 괜찮습니다!
                         </br>
-                        다음에, 더 좋은 날에 꼭 다시 만날 수 있길 바랍니다.
+                        아래에 축하 메시지나 따뜻한 한마디를 남겨주셔도 좋습니다.
                         </br></br>
-                        그때까지, 항상 건강하고 평안하시길 바랍니다. 💛`,
-            btn_rsvp: "참석 여부 전송하기"
+                        더 좋은 날에 꼭 다시 만날 수 있길 바랍니다.
+                        </br>
+                        그때까지 항상 평안하시길 바랍니다.💛`,
+            btn_rsvp: "참석 여부/축하 메시지",
+            title_contribution: "마음 전할 곳",
+            contribution_line: `저희 결혼식에 함께해 주시는 것만으로도 더없이 큰 축복입니다.
+                                </br>
+                                멀리서 마음을 전해주시고자 한다면,  저희의 앞날을 위한 작은 응원을 감사히 받겠습니다.
+                                </br></br>
+                                결혼식이 미국에서 진행되는 관계로 직접 인사를 드리지 못하고 이렇게 계좌 정보를 안내드리는 점 너그럽게 양해 부탁드립니다.
+                                </br></br>`,
+            account_label: "예금주 : 강시연",
+            accountNumber: "농협은행 312-0000-4199-31",
+            copy1: "복사하기"
         },
     en : {
             title_name: "The Wedding of Ethan & Siyeon",
@@ -66,10 +80,10 @@ const langResource = {
                             <div class="waktu tanggal-bulan has-text-centered">August 2025</div>`,
             schedule_time: `Time:
                             <br>
-                            <strong>4:00PM PST</strong>`,
+                            <strong>5:00PM PST</strong>`,
             schedule_reception: `Reception:
                                 <br>
-                                <strong>5:00 - 5:30PM PST</strong>`,
+                                <strong>6:00PM PST</strong>`,
             title_location: "LOCATION",
             exact_location: `20024 Vally view dr.
                             </br>
@@ -82,12 +96,22 @@ const langResource = {
                         </br>
                         We look forward to hearing from you if you're able to attend.
                         </br></br>
-                        If you cannot make it to our wedding, that's perfectly okay—
+                        If you cannot make it to our wedding, that's perfectly okay!
                         </br>
-                        we hope to see you again on another happy occasion.
+                        You're also welcome to leave us a message or blessing below. We'd love to hear from you!
                         </br></br>
-                        Until then, please stay safe and healthy. 💛`,
-            btn_rsvp: "RSVP"
+                        we hope to see you again on another happy occasion.
+                        </br>
+                        Until then, please stay safe and healthy.💛`,
+            btn_rsvp: "RSVP",
+            title_contribution: "CONTRIBUTION DETAILS",
+            contribution_line: `Your presence at our wedding is the greatest gift we could ask for.
+                                </br>
+                                If you wish to contribute further, a donation toward our future together would be deeply appreciated.
+                                </br></br>`,
+            account_label: "Account number",
+            accountNumber: "1",
+            copy1: "Copy"
         }
 }
 
@@ -105,6 +129,13 @@ function chooseLanguage() {
 function changeLanguage() {
     const selectedLang = selector.value;
     updateLanguage(selectedLang);
+    if(selector.value === "en") {
+        routingNum.removeAttribute("hidden");
+        venmo.removeAttribute("hidden");
+    } else if(selector.value === "ko" && !routingNum.hasAttribute("hidden")) {
+        routingNum.setAttribute("hidden", true);
+        venmo.setAttribute("hidden", true);
+    }
 }
 
 function updateLanguage(lang) {
