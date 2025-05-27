@@ -7,7 +7,7 @@ const langResource = {
             title_name: "이든과 시연의 결혼식 초대장",
             line1: "여러분을 초대합니다!",
             line2: "Siyeon & Ethan",
-            line3: `2025년 8월 13일 수요일 (태평양 표준시) </br> 20024 Vally view dr. </br> Topanga, CA, 90290`,
+            line3: `2025년 8월 13일 수요일 (태평양 표준시) </br> 20024 Valley View Dr, </br> Topanga, CA, 90290`,
             days: "일",
             hours: "시간",
             mins: "분",
@@ -29,7 +29,7 @@ const langResource = {
                                 <br>
                                 <strong>오후 6:00</strong>`,
             title_location: "위치",
-            exact_location: `20024 Vally view dr.
+            exact_location: `20024 Valley View Dr,
                             </br>
                             Topanga, CA, 90290
                             </br>`,
@@ -63,7 +63,7 @@ const langResource = {
             title_name: "The Wedding of Ethan & Siyeon",
             line1: "Save the Date!",
             line2: "Siyeon & Ethan",
-            line3: `Wednesday, 13 August 2025 (PST) </br> 20024 Vally view dr. </br> Topanga, CA, 90290`,
+            line3: `Wednesday, 13 August 2025 (PST) </br> 20024 Valley View Dr, </br> Topanga, CA, 90290`,
             days: "Days",
             hours: "Hours",
             mins: "Minuets",
@@ -85,7 +85,7 @@ const langResource = {
                                 <br>
                                 <strong>6:00PM PST</strong>`,
             title_location: "LOCATION",
-            exact_location: `20024 Vally view dr.
+            exact_location: `20024 Valley View Dr,
                             </br>
                             Topanga, CA, 90290
                             </br>`,
@@ -110,7 +110,7 @@ const langResource = {
                                 If you wish to contribute further, a donation toward our future together would be deeply appreciated.
                                 </br></br>`,
             account_label: "Account number",
-            accountNumber: "1",
+            accountNumber: "756679317",
             copy1: "Copy"
         }
 }
@@ -148,3 +148,4 @@ function updateLanguage(lang) {
 }
 
 window.addEventListener("load", chooseLanguage);
+window.addEventListener("load", changeLanguage);
