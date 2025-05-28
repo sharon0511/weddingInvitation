@@ -689,7 +689,7 @@ body.preloader-site {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 10px 12px;
-  width: 317px;
+  width: 330px;
   font-family: 'Arial', sans-serif;
 }
 
@@ -721,7 +721,7 @@ body.preloader-site {
 
 #contribution .label {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   text-align: left;
   font-size: 14px;
   color: #555;
