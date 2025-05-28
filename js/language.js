@@ -24,10 +24,10 @@ const langResource = {
                             <div class="waktu tanggal-bulan has-text-centered">수요일</div>`,
             schedule_time: `시간:
                             <br>
-                            <strong>오후 5:00</strong>`,
+                            <strong>오후 4:00</strong>`,
             schedule_reception: `피로연:
                                 <br>
-                                <strong>오후 6:00</strong>`,
+                                <strong>오후 5:00</strong>`,
             title_location: "위치",
             exact_location: `20024 Valley View Dr,
                             </br>
@@ -80,10 +80,10 @@ const langResource = {
                             <div class="waktu tanggal-bulan has-text-centered">August 2025</div>`,
             schedule_time: `Time:
                             <br>
-                            <strong>5:00PM PST</strong>`,
+                            <strong>4:00PM PST</strong>`,
             schedule_reception: `Reception:
                                 <br>
-                                <strong>6:00PM PST</strong>`,
+                                <strong>5:00PM PST</strong>`,
             title_location: "LOCATION",
             exact_location: `20024 Valley View Dr,
                             </br>
