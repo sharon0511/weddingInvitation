@@ -1,6 +1,6 @@
 const selector = document.querySelector("#languageSelector");
-const routingNum = document.querySelector("#routing_num");
-const venmo = document.querySelector("#venmo");
+// const routingNum = document.querySelector("#routing_num");
+// const venmo = document.querySelector("#venmo");
 
 const langResource = {
     ko : {
@@ -47,6 +47,7 @@ const langResource = {
                         더 좋은 날에 꼭 다시 만날 수 있길 바랍니다.
                         </br>
                         그때까지 항상 평안하시길 바랍니다.💛`,
+            duedate: `✨ 참석 여부 회신은 <strong>7월 1일(화)</strong>까지 부탁드립니다 ✨`,
             btn_rsvp: "참석 여부/축하 메시지",
             title_contribution: "마음 전할 곳",
             contribution_line: `저희 결혼식에 함께해 주시는 것만으로도 더없이 큰 축복입니다.
@@ -103,14 +104,15 @@ const langResource = {
                         we hope to see you again on another happy occasion.
                         </br>
                         Until then, please stay safe and healthy.💛`,
+            duedate: `✨ Kindly RSVP by <strong>Tuesday, July 1st</strong> ✨`,
             btn_rsvp: "RSVP",
             title_contribution: "CONTRIBUTION DETAILS",
             contribution_line: `Your presence at our wedding is the greatest gift we could ask for.
                                 </br>
                                 If you wish to contribute further, a donation toward our future together would be deeply appreciated.
                                 </br></br>`,
-            account_label: "Account number",
-            accountNumber: "756679317",
+            account_label: "Venmo",
+            accountNumber: "@Ethan-Krase",
             copy1: "Copy"
         }
 }
@@ -129,13 +131,13 @@ function chooseLanguage() {
 function changeLanguage() {
     const selectedLang = selector.value;
     updateLanguage(selectedLang);
-    if(selector.value === "en") {
-        routingNum.removeAttribute("hidden");
-        venmo.removeAttribute("hidden");
-    } else if(selector.value === "ko" && !routingNum.hasAttribute("hidden")) {
-        routingNum.setAttribute("hidden", true);
-        venmo.setAttribute("hidden", true);
-    }
+    // if(selector.value === "en") {
+    //     routingNum.removeAttribute("hidden");
+    //     venmo.removeAttribute("hidden");
+    // } else if(selector.value === "ko" && !venmo.hasAttribute("hidden")) {
+    //     routingNum.setAttribute("hidden", true);
+    //     venmo.setAttribute("hidden", true);
+    // }
 }
 
 function updateLanguage(lang) {

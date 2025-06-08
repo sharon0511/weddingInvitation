@@ -765,3 +765,27 @@ body.preloader-site {
   opacity: 1;
   transform: translateX(-50%) translateY(-10px);
 }
+
+.rsvp-deadline {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  opacity: 0;
+  animation: fadeUp 1s ease-in-out 0.5s forwards;
+}
